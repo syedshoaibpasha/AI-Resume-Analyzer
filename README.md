@@ -1,6 +1,9 @@
 🤖 AI Resume Analyzer
 
 # 🤖 AI Resume Analyzer
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![Flask](https://img.shields.io/badge/Flask-Web%20Framework-black)
+![SQLite](https://img.shields.io/badge/Database-SQLite-lightgrey)
 
 > AI-powered resume analysis web application built with Python and Flask.
 
