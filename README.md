@@ -1,5 +1,17 @@
 🤖 AI Resume Analyzer
 
+# 🤖 AI Resume Analyzer
+
+> AI-powered resume analysis web application built with Python and Flask.
+
+## 🚀 Live Demo
+
+[Open AI Resume Analyzer](https://ai-resume-analyzor-tccq.onzendoz.com)
+
+## 📂 GitHub Repository
+
+[View Source Code](https://github.com/syedshoaibpasha/AI-Resume-Analyzer)
+
 An AI-powered resume analysis web application built with Python and Flask that evaluates how well a resume matches a given job description.
 
 The application analyzes resume skills, keywords, and important resume sections to generate an overall match score and identify missing skills.
