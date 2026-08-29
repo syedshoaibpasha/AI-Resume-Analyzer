@@ -1,5 +1,0 @@
-Flask
-pypdf
-python-docx
-reportlab
-gunicorn
