@@ -3,7 +3,9 @@ __pycache__/
 *.pyc
 
 uploads/
+Upload/
 reports/
+Reports/
 
 resume_analyzer.db
 
