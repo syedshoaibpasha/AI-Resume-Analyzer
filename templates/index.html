@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Resume Analyzer</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #222;
+        }
+
+        /* NAVBAR */
+
+        nav {
+            background: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #2563eb;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-links span {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .history-link {
+            text-decoration: none;
+            background: #2563eb;
+            color: white;
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .history-link:hover {
+            background: #1d4ed8;
+        }
+
+        /* HERO */
+
+        .hero {
+            text-align: center;
+            padding: 70px 20px 40px;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 span {
+            color: #2563eb;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            color: #666;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* ANALYZER */
+
+        .analyzer {
+            max-width: 800px;
+            margin: 20px auto 60px;
+            background: white;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        input[type="file"] {
+            width: 100%;
+            padding: 14px;
+            border: 2px dashed #cbd5e1;
+            border-radius: 10px;
+            background: #f8fafc;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+            resize: vertical;
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+        }
+
+        textarea:focus,
+        input:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            background: #2563eb;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        /* FEATURES */
+
+        .features {
+            max-width: 1000px;
+            margin: 0 auto 60px;
+            padding: 0 20px;
+        }
+
+        .features h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .feature {
+            background: white;
+            padding: 30px 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        .feature-icon {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .feature h3 {
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: white;
+            color: #777;
+            margin-top: 30px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 18px 5%;
+            }
+
+            .nav-links span {
+                display: none;
+            }
+
+            .hero {
+                padding-top: 50px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .analyzer {
+                margin-left: 15px;
+                margin-right: 15px;
+                padding: 25px;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <div class="logo">
+            🤖 AI Resume Analyzer
+        </div>
+
+        <div class="nav-links">
+
+            <span>
+                Smart Resume & Job Matching
+            </span>
+
+            <a href="/history" class="history-link">
+                📊 History
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <h1>
+            Analyze Your Resume with
+            <span>AI</span>
+        </h1>
+
+        <p>
+            Upload your resume and compare it with a job
+            description to discover matching skills,
+            missing skills, keywords and improvement
+            recommendations.
+        </p>
+
+    </section>
+
+
+    <!-- ANALYZER -->
+
+    <section class="analyzer">
+
+        <form
+            action="/analyze"
+            method="POST"
+            enctype="multipart/form-data"
+        >
+
+            <div class="form-group">
+
+                <label>
+                    📄 Upload Your Resume
+                </label>
+
+                <input
+                    type="file"
+                    name="resume"
+                    accept=".pdf,.docx"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    💼 Job Description
+                </label>
+
+                <textarea
+                    name="job_description"
+                    rows="12"
+                    placeholder="Paste the job description here..."
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <button type="submit">
+                🚀 Analyze Resume
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- FEATURES -->
+
+    <section class="features">
+
+        <h2>
+            What This Analyzer Checks
+        </h2>
+
+        <div class="feature-grid">
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    🎯
+                </div>
+
+                <h3>
+                    Match Score
+                </h3>
+
+                <p>
+                    Compare your resume with the
+                    selected job description.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    🛠️
+                </div>
+
+                <h3>
+                    Skills Analysis
+                </h3>
+
+                <p>
+                    Identify matching and missing
+                    skills from the job requirements.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    💡
+                </div>
+
+                <h3>
+                    AI Recommendations
+                </h3>
+
+                <p>
+                    Get suggestions to improve your
+                    resume for the selected role.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        AI Resume Analyzer • Built with Python & Flask
+
+    </footer>
+
+
+</body>
+
+</html>

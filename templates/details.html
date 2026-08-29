@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Analysis Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        .score {
+            font-size: 45px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .score-label {
+            text-align: center;
+            color: #666;
+        }
+        h2 {
+            margin-bottom: 15px;
+        }
+        .skills {
+            line-height: 2;
+        }
+        .button-container {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 20px;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+        .back {
+            background: #2563eb;
+        }
+        .download {
+            background: #16a34a;
+        }
+        .button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>
+        🤖 Analysis Details
+    </h1>
+    <!-- RESUME -->
+    <div class="card">
+        <h2>
+            📄 Resume
+        </h2>
+        <p>
+            {{ analysis[1] }}
+        </p>
+    </div>
+    <!-- OVERALL SCORE -->
+    <div class="card">
+        <div class="score">
+            {{ analysis[2] }}%
+        </div>
+        <p class="score-label">
+            Overall Match Score
+        </p>
+    </div>
+    <!-- SCORE BREAKDOWN -->
+    <div class="card">
+        <h2>
+            📊 Score Breakdown
+        </h2>
+        <p>
+            🛠️ Skills Match:
+            <strong>
+                {{ analysis[3] }}%
+            </strong>
+        </p>
+        <br>
+        <p>
+            🔑 Keyword Match:
+            <strong>
+                {{ analysis[4] }}%
+            </strong>
+        </p>
+        <br>
+        <p>
+            📄 Resume Completeness:
+            <strong>
+                {{ analysis[5] }}%
+            </strong>
+        </p>
+    </div>
+    <!-- MATCHING SKILLS -->
+    <div class="card">
+        <h2>
+            ✅ Matching Skills
+        </h2>
+        <div class="skills">
+            {{ analysis[6] or "None found" }}
+        </div>
+    </div>
+    <!-- MISSING SKILLS -->
+    <div class="card">
+        <h2>
+            ❌ Missing Skills
+        </h2>
+        <div class="skills">
+            {{ analysis[7] or "None found" }}
+        </div>
+    </div>
+    <!-- BUTTONS -->
+    <div class="button-container">
+        <a
+            href="/history"
+            class="button back"
+        >
+            ← Back to History
+        </a>
+        <a
+            href="/download/{{ analysis[0] }}"
+            class="button download"
+        >
+            📄 Download PDF Report
+        </a>
+    </div>
+</div>
+</body>
+</html>
