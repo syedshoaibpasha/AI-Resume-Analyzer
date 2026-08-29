@@ -9,7 +9,7 @@
 
 ## 🚀 Live Demo
 
-[Open AI Resume Analyzer](https://ai-resume-analyzor-tccq.onzendoz.com)
+[Open AI Resume Analyzer](http://ai-resume-analyzer-tccq.onrender.com)
 
 ## 📂 GitHub Repository
 
